@@ -1,0 +1,26 @@
+{
+    "broadcasterColor": {
+        "label": "Select your own name color",
+        "type": "colorpicker",
+        "value": "#FF4A4A"
+    },
+    "subColor": {
+        "label": "Select subscribers' name color",
+        "type": "colorpicker",
+        "value": "#E5C949"
+    },
+    "textSpeed": {
+        "label": "Adjust the speed at which the text is written",
+        "type": "slider",
+        "name": "",
+        "value": 50,
+        "max": 200,
+        "min": 30,
+        "steps": 5
+    },
+    "subIcon": {
+        "label": "Custom subscriber annotation",
+        "type": "textfield",
+        "value": "[*]"
+    }
+}
