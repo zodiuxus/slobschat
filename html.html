@@ -1,0 +1,23 @@
+<!-- item will be appened to this layout -->
+<div id="log" class="sl__chat__layout">
+</div>
+ <span class="metaTags">
+ 			<span id="brC">{broadcasterColor}</span>
+  		<span id="subC">{subColor}</span>
+      <span id="textSpeed">{textSpeed}</span>
+   		<span id="subIcon">{subIcon}</span>
+  </span>
+<!-- chat item -->
+<script type="text/template" id="chatlist_item">
+  <div data-from="{from}" data-id="{messageId}">
+    <span class="meta" style="color: {color}">
+      <span class="badges">
+      </span>
+      <span class="name">{from}</span>
+    </span>
+
+    <span class="message">
+	{message}
+    </span>
+  </div>
+</script>
