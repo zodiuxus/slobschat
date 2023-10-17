@@ -10,13 +10,22 @@
         "value": "#E5C949"
     },
     "textSpeed": {
-        "label": "Adjust the speed at which the text is written",
+        "label": "Adjust the speed at which the text is written (in milliseconds)",
         "type": "slider",
         "name": "",
         "value": 50,
         "max": 200,
         "min": 30,
         "steps": 5
+    },
+    "textFade": {
+        "label": "Adjust the delay at which the text disappears (in seconds)",
+        "type": "slider",
+        "name": "",
+        "value": 3,
+        "max": 200,
+        "min": 0,
+        "steps": 1
     },
     "subIcon": {
         "label": "Custom subscriber annotation",
