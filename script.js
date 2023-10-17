@@ -33,7 +33,7 @@ document.addEventListener('onEventReceived', function(obj) {
 });
 
 function substar(divNum, user) {
-  if (user.tags['subscriber']==0) {
+  if (user.tags['subscriber']==1) {
     username[divNum].innerText += subIcon;
     username[divNum].style.color = subColor;
   }
@@ -50,7 +50,6 @@ async function typewriter(divNum, typetext){
     await timer(textSpeed);
   }
   collection[divNum].innerText = typetext.substring(0, typetext.length);
-  console.log(animText);
   messageBox[divNum].style.animation = animText;
   await timer(msFade);
   messageBox[divNum].style.display = "none";
