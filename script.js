@@ -54,6 +54,7 @@ async function typewriter(divNum, typetext){
   messageBox[divNum].style.animation = animText;
   await timer(msFade);
   messageBox[divNum].style.display = "none";
+  messageBox.remove();
 }
 
 window.addEventListener("unhandledrejection", function(promiseRejectionEvent) { 
