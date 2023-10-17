@@ -6,6 +6,7 @@ document.addEventListener('onLoad', function(obj) {
 var i =0;
 var bodytext = {};
 
+var messageBox = document.getElementsByClassName("disappear");
 var collection = document.getElementsByClassName("message");
 var username = document.getElementsByClassName("name");
 
@@ -13,6 +14,10 @@ const broadcasterColor = document.getElementById("brC").innerText;
 const subColor = document.getElementById("subC").innerText;
 const textSpeed = document.getElementById("textSpeed").innerText;
 const subIcon = document.getElementById("subIcon").innerText;
+const textFade = document.getElementById("textFade").innerText;
+
+let animText = `fadeOut 1s ease-out {textFade}s 1 forwards normal`;
+const msFade = textFade*1000+1000;
 
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
@@ -45,6 +50,10 @@ async function typewriter(divNum, typetext){
     await timer(textSpeed);
   }
   collection[divNum].innerText = typetext.substring(0, typetext.length);
+  console.log(animText);
+  messageBox[divNum].style.animation = animText;
+  await timer(msFade);
+  messageBox[divNum].style.display = "none";
 }
 
 window.addEventListener("unhandledrejection", function(promiseRejectionEvent) { 
