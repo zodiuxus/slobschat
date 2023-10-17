@@ -9,6 +9,7 @@ var bodytext = {};
 var messageBox = document.getElementsByClassName("disappear");
 var collection = document.getElementsByClassName("message");
 var username = document.getElementsByClassName("name");
+var messageOrig = document.getElementsByClassName("messageOrig");
 
 const broadcasterColor = document.getElementById("brC").innerText;
 const subColor = document.getElementById("subC").innerText;
@@ -46,14 +47,15 @@ function substar(divNum, user) {
 
 async function typewriter(divNum, typetext){
   for (let j=0; j<=typetext.length; j++) {
-    collection[divNum].innerText = typetext.substring(0, j)+ "\u25ae";
+    collection[divNum].innerHTML = typetext.substring(0, j)+ "\u25ae";
     await timer(textSpeed);
   }
-  collection[divNum].innerText = typetext.substring(0, typetext.length);
+  collection[divNum].innerHTML = typetext.substring(0, typetext.length);
   messageBox[divNum].style.animation = animText;
+	collection[divNum].style.display = "none";
+  messageOrig[divNum].style.display = "inline-block";
   await timer(msFade);
-  messageBox[divNum].style.display = "none";
-  messageBox.remove();
+  messageOrig[divNum].style.display = "none";
 }
 
 window.addEventListener("unhandledrejection", function(promiseRejectionEvent) { 
